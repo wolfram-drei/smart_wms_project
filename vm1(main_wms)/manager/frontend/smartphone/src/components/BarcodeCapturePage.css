@@ -1,0 +1,241 @@
+/* 전체 페이지 컨테이너 */
+.barcode-capture-container {
+    max-width: 480px; /* 더 넓은 화면까지 커버 */
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+/* 페이드 인 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 타이틀 스타일 */
+.barcode-capture-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* 타이틀 아래 강조선 */
+.barcode-capture-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 8px auto 0;
+    background: #17a2b8;
+    border-radius: 2px;
+}
+
+/* 라벨 + 파일 인풋 감싸는 그룹 */
+.barcode-capture-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 라벨 스타일 */
+.barcode-capture-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* 파일 인풋 스타일 */
+.barcode-capture-file-input {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-align: center;
+    color: #777;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.barcode-capture-file-input:hover {
+    border-color: #17a2b8;
+    background-color: #e9f7fb;
+}
+
+/* 미리보기 영역 */
+.barcode-capture-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: #f0f4f8;
+    padding: 10px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.barcode-capture-preview-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.barcode-capture-preview-img:hover {
+    transform: scale(1.05);
+}
+
+/* 업로드 버튼 스타일 */
+.barcode-capture-upload-button {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    background: linear-gradient(90deg, #17a2b8, #138496);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.barcode-capture-upload-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 162, 184, 0.4);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .barcode-capture-container {
+        padding: 16px;
+    }
+    .barcode-capture-title {
+        font-size: 1.6rem;
+    }
+    .barcode-capture-file-input {
+        font-size: 0.9rem;
+    }
+    .barcode-capture-upload-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .barcode-capture-title {
+        font-size: 1.4rem;
+    }
+    .barcode-capture-file-input {
+        font-size: 0.85rem;
+    }
+    .barcode-capture-upload-button {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .detail-field {
+    margin-bottom: 10px;
+  }
+  
+  .barcode-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .btn-complete {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  .btn-close {
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .btn-complete:hover {
+    background-color: #218838;
+  }
+  
+  .btn-close:hover {
+    background-color: #bbb;
+  }
+  

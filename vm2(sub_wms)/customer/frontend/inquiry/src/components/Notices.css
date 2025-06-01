@@ -1,0 +1,227 @@
+.notice-board-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+/* 검색 바 */
+.search-bar {
+  padding: 20px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* AG Grid 테이블 */
+.grid-container {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+/* AG Grid 흐리게 처리 */
+.grid-container.blur {
+  filter: blur(5px); /* 흐림 효과 */
+  transition: filter 0.3s ease; /* 부드러운 전환 */
+}
+
+
+/* 글쓰기 버튼 (AG Grid 바로 밑에 위치) */
+.write-button {
+  position: relative;
+  margin-top: 5px; /* AG Grid와 간격 */
+  padding: 10px 20px;
+  display: flex;
+  bottom: 25%;
+  right: 2%;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: block; /* 부모 컨테이너에 종속 */
+  margin-left: auto; /* 오른쪽 정렬 */
+  
+}
+
+.write-button:hover {
+  background-color: #0056b3;
+}
+
+/* 상세 정보 패널 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.details-panel {
+  background: white;
+  width: 400px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.details-panel .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.details-panel input,
+.details-panel textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+/* 전체 패널 스타일 */
+.details-panel {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  position: relative;
+}
+
+/* 레이블 및 입력 필드 스타일 */
+.details-panel label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333333;
+}
+
+.details-panel input[type="text"],
+.details-panel textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.details-panel textarea {
+  height: 300px; /* 초기 크기 설정 */
+  resize: vertical; /* 세로 크기 조정 가능 */
+}
+
+/* 버튼 스타일 */
+.details-panel button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.details-panel button:hover {
+  opacity: 0.9;
+}
+
+/* 저장 버튼 */
+.details-panel button.save-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.details-panel button.save-button:hover {
+  background-color: #218838;
+}
+
+/* 삭제 버튼 */
+.details-panel button.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.details-panel button.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* 닫기 버튼 */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888888;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #000000;
+}
+
+/*알림 메시지*/
+.alert {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}

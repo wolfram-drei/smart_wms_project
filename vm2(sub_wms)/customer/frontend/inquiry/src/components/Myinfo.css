@@ -1,0 +1,191 @@
+/* 전체 컨테이너 */
+.main-container {
+  width: 100%; /* 화면 너비에 맞게 확장 */
+  height: 100%; /* 화면 높이에 맞게 확장 */
+  padding: 30px;
+  background-color: #d3d3d3; /* 라이트 그레이 배경 색상 */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* 사원 목록 컨테이너 */
+.employee-list-container {
+  width: 100%;
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: relative; /* 상대적 위치 설정 */
+}
+
+/* 사원 목록 컨테이너의 헤더 */
+.employee-list-container h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+/* 사원 목록 컨테이너 테이블 */
+.employee-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-list-container th,
+.employee-list-container td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.employee-list-container th {
+  background-color: #f0f0f0;
+  font-size: 18px;
+}
+
+.employee-list-container td {
+  font-size: 14px; /* 텍스트 사이즈 2px 줄임 */
+}
+
+/* 버튼들 */
+.employee-list-container .button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px; /* 버튼들 간 간격 */
+  margin-top: 20px;
+}
+
+.add-button {
+  background-color: #4CAF50; /* 수정하기 버튼과 동일한 색상 */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 15px; /* 삭제하기 버튼과 간격을 두기 위해 추가 */
+}
+
+.add-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: #f44336; /* 기존 삭제 버튼 색상 */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* 사원 상세정보 컨테이너 */
+.employee-detail-container {
+  width: 420px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.employee-detail-container h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.employee-detail-container p {
+  margin: 12px 0;
+  font-size: 14px; /* 텍스트 사이즈 2px 줄임 */
+  line-height: 1.8;
+}
+
+.employee-detail-container p label {
+  font-weight: bold;
+  display: inline-block;
+  min-width: 100px;
+  margin-right: 15px;
+}
+
+.employee-detail-container .button-container {
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.employee-detail-container button {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.employee-detail-container button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.employee-detail-container .button-container button:nth-child(2) {
+  margin-left: 15px;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .employee-list-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .employee-detail-container {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .employee-list-container {
+    padding: 20px;
+  }
+
+  .employee-detail-container {
+    padding: 20px;
+  }
+}

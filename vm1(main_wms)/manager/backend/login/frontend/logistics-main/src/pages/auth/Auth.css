@@ -1,0 +1,231 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.6s ease-in-out;
+}
+
+/* 비디오 배경 스타일 */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.login-button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.4s ease-in-out;
+}
+/* 회원가입 버튼 스타일 */
+.signup-button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.4s ease-in-out;
+}
+
+/* 비활성화 상태 */
+.signup-button.disabled {
+  background-color: #cccccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* 활성화 상태 */
+.signup-button.active {
+  background-color: #2ecc71;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-button.active:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+/* 컨테이너 */
+.auth-container {
+  width: 850px;
+  height: 500px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  transition: background-color 0.6s ease-in-out;
+}
+
+/* 로그인/회원가입 폼 위치 */
+.form-container {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.auth-container.login .form-container.login,
+.auth-container.signup .form-container.signup {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form-container.login {
+  left: 0;
+}
+
+.form-container.signup {
+  right: 0;
+}
+
+/* 폼 스타일 */
+form {
+  width: 80%;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(0.9);
+  transition: transform 0.4s ease-in-out 0.2s;
+}
+
+.auth-container.login .form-container.login form,
+.auth-container.signup .form-container.signup form {
+  transform: scale(1);
+}
+
+form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form input {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* 팝업 */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+}
+
+.popup-content input {
+  margin-right: 8px;
+}
+
+.popup-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+/* 오버레이 */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.6s ease-in-out, background 0.6s ease-in-out;
+  z-index: 10;
+}
+
+.auth-container.signup .overlay {
+  transform: translateX(-100%);
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+}
+
+.overlay-panel {
+  color: #fff;
+}
+
+.overlay-panel h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.overlay-panel p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.overlay-panel button {
+  padding: 10px 40px;
+  background: none;
+  color: white;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.4s ease-in-out;
+}
+
+.overlay-panel button:hover {
+  background: white;
+  color: #27ae60;
+  transform: scale(1.1);
+}

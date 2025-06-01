@@ -1,0 +1,133 @@
+/* 댓글 패널 */
+.comments-panel {
+  background: white;
+  width: 600px;
+  max-height: 90%;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* 제목 스타일 */
+.comments-panel h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 댓글 리스트 */
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.comment-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.comment-item p {
+  margin: 0;
+  color: #555;
+  font-size: 1em;
+}
+
+.comment-item small {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* 버튼 스타일 */
+.comment-item .edit-button,
+.comment-item .delete-button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 0.85em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.comment-item .edit-button {
+  background: #007bff;
+  color: white;
+}
+
+.comment-item .edit-button:hover {
+  background: #0056b3;
+}
+
+.comment-item .delete-button {
+  background: #dc3545;
+  color: white;
+}
+
+.comment-item .delete-button:hover {
+  background: #b02a37;
+}
+
+/* 댓글 작성 폼 */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.comment-form .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.comment-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.comment-form .save-button {
+  width: 150px;
+  align-self: flex-end;
+  padding: 8px 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.comment-form .save-button:hover {
+  background: #218838;
+}
+
+.comment-form .save-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

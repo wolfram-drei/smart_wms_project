@@ -1,0 +1,27 @@
+select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+select:hover {
+    background-color: #f1f1f1;
+}
+
+.user-table-wrapper {
+    max-height: 400px; /* or 70vh */
+    width: 1200px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+}
+.user-table-wrapper table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}

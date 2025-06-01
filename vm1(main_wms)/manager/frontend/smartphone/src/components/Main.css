@@ -1,0 +1,59 @@
+/* 메인 컨테이너 */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* 제목 */
+  .main-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* 버튼 컨테이너 */
+  .button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* 공통 버튼 스타일 */
+  .custom-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* 입고 버튼 스타일 */
+  .inbound-button {
+    background-color: #4caf50; /* 녹색 */
+  }
+  
+  .inbound-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* 출고 버튼 스타일 */
+  .outbound-button {
+    background-color: #2196f3; /* 파란색 */
+  }
+  
+  .outbound-button:hover {
+    background-color: #1e87e5;
+    transform: scale(1.05);
+  }
+  

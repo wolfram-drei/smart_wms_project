@@ -1,0 +1,7 @@
+manager/backend/inbound_defect/model/best_model.h5
+manager/backend/inbound_defect/model/final_model.h5
+manager/backend/spio/weights/RealESRGAN_x4plus.pth
+node_modules/
+dist/
+build/
+*.log

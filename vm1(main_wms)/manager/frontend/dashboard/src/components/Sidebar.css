@@ -1,0 +1,88 @@
+/* Sidebar 전체 스타일 */
+.sidebar {
+  width: 160px;
+  background-color: #ffffff; /* 흰색 배경 */
+  color: black; /* 텍스트 색상 */
+  padding: 5px;
+
+  padding-right: 5px;
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position : fixed;
+  top : 0;
+  left : 0;
+  z-index: 1000;
+}
+
+/* 상단 제목 스타일 */
+.sidebar-header {
+  display: flex; /* 로고와 텍스트를 나란히 정렬 */
+  align-items: center; /* 세로 정렬 */
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-top : 5px;
+  margin-left: 5px;
+  margin-bottom: 15px; /* 메뉴와 간격 */
+  text-align: center;
+  justify-content: center; /* 전체 가운데 정렬 */
+  /* 추가 내용 (로고 왼쪽으로 부착)*/
+  justify-content : flex-start;
+}
+/* 상위 메뉴 스타일 */
+.menu-group {
+  margin-bottom: 20px;
+}
+
+.menu-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top : 5px;
+  margin-left: 10px;
+  color: #000000;
+}
+
+/* 하위 메뉴 스타일 (패딩 제거)*/
+
+
+.sidebar-item {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* 텍스트 색상 전환 추가 */
+  color: gray; /* 기본 텍스트 색상 */
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.sidebar-item:hover {
+  background-color: #6f47c5; /* 호버 시 배경색 */
+  border-radius: 10px;
+  font-weight: bold;
+  color: white; /* 텍스트 색상 흰색 */
+}
+
+.sidebar-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 2px;
+  transition: filter 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 로고 스타일 */
+.sidebar-logo {
+  width: 30px; /* 로고 크기 */
+  height: 30px;
+  margin: 0px 5px; /* 로고와 텍스트 사이 간격 */
+  margin-right: 10px;
+}
+
+/* 부모가 호버될 때 아이콘도 흰색으로 변경 */
+.sidebar-item:hover .sidebar-icon {
+  filter: brightness(0) invert(1); /* 색상 반전으로 흰색 표시 */
+}

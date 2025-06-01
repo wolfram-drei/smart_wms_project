@@ -1,0 +1,193 @@
+/* 컨테이너 스타일 */
+.inquiries-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #f9f9f9;
+}
+
+/* 알림 메시지 */
+.alert {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px auto;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* 검색 바 */
+.search-bar {
+    padding: 20px;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* AG Grid 테이블 */
+.grid-container {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+/* AG Grid 흐리게 처리 */
+.grid-container.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+/* 글쓰기 버튼 */
+.write-button {
+    position: relative; /* AG Grid 아래로 이동 */
+    margin: 20px auto 0; /* 상단 여백 추가 및 중앙 정렬 */
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block; /* 버튼을 블록 요소로 */
+    width: fit-content; /* 버튼 크기를 내용에 맞춤 */
+}
+
+.write-button:hover {
+    background-color: #0056b3;
+}
+
+/* 상세 정보 패널 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.details-panel {
+    background: white;
+    width: 400px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 닫기 버튼 */
+.details-panel .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888888;
+    transition: color 0.3s ease;
+}
+
+.details-panel .close-button:hover {
+    color: #000000;
+}
+
+/* 입력 필드와 레이블 */
+.details-panel label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333333;
+    display: block;
+}
+
+.details-panel input[type="text"],
+.details-panel textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.details-panel textarea {
+    height: 150px;
+    resize: vertical; /* 세로 크기 조정 가능 */
+}
+
+/* 버튼 스타일 */
+.details-panel button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.details-panel button:hover {
+    opacity: 0.9;
+}
+
+/* 저장 버튼 */
+.details-panel button.save-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.details-panel button.save-button:hover {
+    background-color: #0056b3;
+}
+
+/* 삭제 버튼 */
+.details-panel button.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.details-panel button.delete-button:hover {
+    background-color: #c82333;
+}
